@@ -1,82 +1,176 @@
-/* ═══════ CTA Section ═══════ */
+/* ═══════ CTA / Contact Section ═══════ */
 .cta-section {
     background: var(--gradient-hero);
     padding: 120px 0;
     position: relative;
     overflow: hidden;
-}
-
-.cta-section__bg-glow {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(238, 57, 104, 0.12), transparent 70%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    filter: blur(60px);
-    pointer-events: none;
-}
-
-.cta-content {
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    max-width: 640px;
-    margin: 0 auto;
-}
-
-.cta-content h2 {
     color: var(--color-white);
-    font-size: var(--font-size-2xl);
-    margin-bottom: 16px;
 }
 
-.cta-content p {
-    color: rgba(203, 213, 224, 0.7);
-    margin-bottom: 40px;
+/* Ambient Deep Glow */
+.cta-section__glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(238, 57, 104, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    position: relative;
+    z-index: 1;
+    align-items: center;
+}
+
+/* ── Left Column: Messaging & Info ── */
+.cta-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-header {
+    margin-bottom: 48px;
+}
+
+.cta-header .badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-header .subtitle-handwriting {
+    color: var(--color-primary-light);
+    margin-bottom: 0px;
+}
+
+.cta-header h2 {
+    font-size: var(--font-size-4xl);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    color: var(--color-white);
+}
+
+.cta-header p {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 480px;
+}
+
+/* Contact Info List */
+.cta-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cta-info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: var(--font-size-lg);
+    color: var(--color-white);
+}
+
+.cta-info-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--color-primary-light);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.cta-info-item:hover .cta-info-icon {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+/* ── Right Column: Action Card ── */
+.cta-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cta-action-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 48px 40px;
+    border-radius: var(--border-radius-xl);
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.cta-action-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 12px;
+}
+
+.cta-action-card p {
     font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 32px;
 }
 
 .cta-buttons {
     display: flex;
+    flex-direction: column;
     gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
-.cta-contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 56px;
-    padding-top: 36px;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-    flex-wrap: wrap;
+.btn--full {
+    width: 100%;
 }
 
-.cta-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgba(203, 213, 224, 0.6);
-    font-size: var(--font-size-sm);
-    transition: color var(--transition-fast);
-}
-
-.cta-contact-item:hover {
+.cta-action-card .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.2);
     color: var(--color-white);
 }
 
-.cta-contact-item .icon {
-    font-size: 16px;
+.cta-action-card .btn-secondary:hover {
+    border-color: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* ── Responsive ── */
+@media (max-width: 1024px) {
+    .cta-container {
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+
+    .cta-right {
+        justify-content: flex-start;
+    }
+
+    .cta-action-card {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-    .cta-contact-info {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+    .cta-header h2 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .cta-action-card {
+        padding: 32px 24px;
     }
 }

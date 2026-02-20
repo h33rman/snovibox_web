@@ -8,7 +8,6 @@ import {
     Services,
     WhyUs,
     Technologies,
-    CtaSection,
     Footer,
 } from "@/components";
 
@@ -21,7 +20,6 @@ export function HomeScreen() {
                 <Services />
                 <WhyUs />
                 <Technologies />
-                <CtaSection />
             </main>
             <Footer />
         </LanguageProvider>

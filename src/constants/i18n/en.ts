@@ -211,15 +211,31 @@ export const en = {
         title: "The tools we master",
     },
 
-    // ── CTA ──
+    // ── Contact / CTA ──
     cta: {
-        title: "Ready to digitalize your business?",
+        badge: "Contact",
+        subtitle: "Ready to start?",
+        title: "Let's discuss your project",
         description:
-            "Contact us to discuss your project. Our team is ready to turn your ideas into concrete digital solutions.",
+            "Our team is ready to turn your ideas into concrete digital solutions. Do not hesitate to reach out to us.",
+        actionTitle: "Start the project",
+        actionDesc: "Contact us directly through our channels below.",
+        emailBtn: "Send us an email",
+        phoneBtn: "Call us",
+        info: [
+            { icon: "fi fi-rr-marker", text: "Antananarivo, Madagascar" },
+            { icon: "fi fi-rr-envelope", text: "contact@snovibox.com" },
+            { icon: "fi fi-rr-phone-call", text: "+261 34 00 000 00" },
+        ],
     },
 
     // ── Footer ──
     footer: {
+        cta: {
+            title: "Ready to start your project?",
+            description: "Join the companies that trust Snovibox for their digital transformation.",
+            buttonText: "Get started now",
+        },
         description:
             "Study and implementation of sustainable digital solutions. Web and mobile applications, UX/UI design, ERP, and hardware deployment.",
         columns: {

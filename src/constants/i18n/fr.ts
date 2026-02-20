@@ -211,15 +211,31 @@ export const fr = {
         title: "Les outils que nous maîtrisons",
     },
 
-    // ── CTA ──
+    // ── Contact / CTA ──
     cta: {
-        title: "Prêt à digitaliser votre activité ?",
+        badge: "Contact",
+        subtitle: "Prêt à commencer ?",
+        title: "Discutons de votre projet",
         description:
-            "Contactez-nous pour discuter de votre projet. Notre équipe est à votre disposition pour transformer vos idées en solutions numériques concrètes.",
+            "Notre équipe est à votre disposition pour transformer vos idées en solutions numériques concrètes. N'hésitez pas à nous contacter.",
+        actionTitle: "Démarrer le projet",
+        actionDesc: "Contactez-nous directement via nos canaux ci-dessous.",
+        emailBtn: "Nous envoyer un email",
+        phoneBtn: "Nous appeler",
+        info: [
+            { icon: "fi fi-rr-marker", text: "Antananarivo, Madagascar" },
+            { icon: "fi fi-rr-envelope", text: "contact@snovibox.com" },
+            { icon: "fi fi-rr-phone-call", text: "+261 34 00 000 00" },
+        ],
     },
 
     // ── Footer ──
     footer: {
+        cta: {
+            title: "Prêt à démarrer votre projet ?",
+            description: "Rejoignez les entreprises qui font confiance à Snovibox pour leur transformation digitale.",
+            buttonText: "Commencer maintenant",
+        },
         description:
             "Étude et mise en œuvre de solutions digitales durables. Applications web et mobile, UX/UI design, ERP et déploiement hardware.",
         columns: {
