@@ -6,3 +6,4 @@ export { About } from "./About";
 export { Trust } from "./Trust";
 export { CtaSection } from "./CtaSection";
 export { Footer } from "./Footer";
+export { Technologies } from "./Technologies";

@@ -7,6 +7,7 @@ import {
     Hero,
     Services,
     WhyUs,
+    Technologies,
     CtaSection,
     Footer,
 } from "@/components";
@@ -19,6 +20,7 @@ export function HomeScreen() {
                 <Hero />
                 <Services />
                 <WhyUs />
+                <Technologies />
                 <CtaSection />
             </main>
             <Footer />

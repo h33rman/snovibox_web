@@ -12,10 +12,12 @@
 @import '../styles/cta.css';
 @import '../styles/footer.css';
 @import '../styles/whyus.css';
+@import '../styles/technologies.css';
 
 :root {
   /* ── Typography ── */
-  --font-family: 'Montserrat', sans-serif;
+  --font-family: var(--font-montserrat), sans-serif;
+  --font-handwriting: var(--font-labelle), cursive;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -222,6 +224,16 @@ p {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: 1px solid rgba(238, 57, 104, 0.1);
+}
+
+.subtitle-handwriting {
+  font-family: var(--font-handwriting);
+  font-size: 38px;
+  color: var(--color-primary);
+  margin-bottom: -6px;
+  display: block;
+  transform: rotate(-3deg);
+  font-weight: 400;
 }
 
 /* ═══════ Buttons ═══════ */

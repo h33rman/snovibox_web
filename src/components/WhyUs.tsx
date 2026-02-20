@@ -4,76 +4,56 @@ import React from "react";
 import { useLanguage } from "@/hooks";
 import { AnimatedSection } from "@/widgets";
 
-const stats = [
-    { icon: "🚀", numberKey: "2020", labelKey: "yearFounded" },
-    { icon: "👨‍💻", numberKey: "10+", labelKey: "teamExperts" },
-    { icon: "🌍", numberKey: "5+", labelKey: "industrySectors" },
-    { icon: "🇨🇭", numberKey: "100%", labelKey: "swissData" },
-];
-
-const values = [
-    {
-        icon: "🇨🇭",
-        titleKey: "swissHosting",
-        descKey: "swissHostingDesc",
-    },
-    {
-        icon: "🎯",
-        titleKey: "customSolutions",
-        descKey: "customSolutionsDesc",
-    },
-    {
-        icon: "📱",
-        titleKey: "multiPlatform",
-        descKey: "multiPlatformDesc",
-    },
-    {
-        icon: "🤝",
-        titleKey: "localExpertise",
-        descKey: "localExpertiseDesc",
-    },
-];
-
 export function WhyUs() {
     const { t } = useLanguage();
 
     return (
-        <section className="why-us section">
-            <div className="container">
-                {/* Stats bar */}
-                <AnimatedSection>
-                    <div className="why-us__stats">
+        <section className="wu-split section">
+            <div className="container wu-split__container">
+                {/* ── Left Column: Intro & Stats ── */}
+                <div className="wu-split__left">
+                    <AnimatedSection>
+                        <div className="wu-split__header">
+                            <span className="subtitle-handwriting">{t.whyUs.subtitle}</span>
+                            <h2>{t.whyUs.title}</h2>
+                            <p>{t.whyUs.description}</p>
+                        </div>
+                    </AnimatedSection>
+
+                    <div className="wu-split__stats">
                         {t.whyUs.stats.map((stat: { icon: string; number: string; label: string }, i: number) => (
-                            <div key={i} className="why-us__stat">
-                                <span className="why-us__stat-icon">{stat.icon}</span>
-                                <span className="why-us__stat-number">{stat.number}</span>
-                                <span className="why-us__stat-label">{stat.label}</span>
-                            </div>
+                            <AnimatedSection key={i} delay={0.1 + i * 0.1}>
+                                <div className="wu-stat">
+                                    <div className="wu-stat__icon">
+                                        <i className={stat.icon}></i>
+                                    </div>
+                                    <div className="wu-stat__content">
+                                        <span className="wu-stat__number">{stat.number}</span>
+                                        <span className="wu-stat__label">{stat.label}</span>
+                                    </div>
+                                </div>
+                            </AnimatedSection>
                         ))}
                     </div>
-                </AnimatedSection>
+                </div>
 
-                {/* Value props */}
-                <AnimatedSection delay={0.2}>
-                    <div className="why-us__header">
-                        <span className="badge">{t.whyUs.badge}</span>
-                        <h2>{t.whyUs.title}</h2>
-                        <p>{t.whyUs.description}</p>
-                    </div>
-                </AnimatedSection>
-
-                <div className="why-us__grid">
-                    {t.whyUs.items.map((item: { icon: string; title: string; description: string }, i: number) => (
-                        <AnimatedSection key={i} delay={i * 0.1}>
-                            <div className="why-us__card">
-                                <div className="why-us__card-icon">
-                                    <span>{item.icon}</span>
+                {/* ── Right Column: Value Prop Stack ── */}
+                <div className="wu-split__right">
+                    <div className="wu-stack">
+                        {t.whyUs.items.map((item: { icon: string; title: string; description: string }, i: number) => (
+                            <AnimatedSection key={i} delay={0.3 + i * 0.1}>
+                                <div className="wu-card">
+                                    <div className="wu-card__icon">
+                                        <i className={item.icon}></i>
+                                    </div>
+                                    <div className="wu-card__content">
+                                        <h4>{item.title}</h4>
+                                        <p>{item.description}</p>
+                                    </div>
                                 </div>
-                                <h4>{item.title}</h4>
-                                <p>{item.description}</p>
-                            </div>
-                        </AnimatedSection>
-                    ))}
+                            </AnimatedSection>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

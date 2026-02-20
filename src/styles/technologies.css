@@ -1,0 +1,143 @@
+/* ═══════ Technologies Infinite Marquee ═══════ */
+.tech-section {
+    background: var(--color-white);
+    padding: 100px 0 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Base Marquee Container */
+.tech-marquee-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    /* Soft gradient fade on left and right edges */
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 15%,
+            rgba(0, 0, 0, 1) 85%,
+            rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 1) 15%,
+            rgba(0, 0, 0, 1) 85%,
+            rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+}
+
+/* Individual Marquee Track Row */
+.tech-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* The Moving Inner Track */
+.tech-marquee__track {
+    display: flex;
+    gap: 32px;
+    padding: 10px 0;
+    width: max-content;
+    /* Ensure it takes up enough space for all items */
+}
+
+/* Left Scrolling Animation */
+.tech-marquee__track--left {
+    animation: marqueeLeft 40s linear infinite;
+}
+
+/* Right Scrolling Animation (Reversed) */
+.tech-marquee__track--right {
+    animation: marqueeRight 35s linear infinite;
+}
+
+/* Pause animations on hover */
+.tech-marquee__track:hover {
+    animation-play-state: paused;
+}
+
+/* ── Individual Tech Card ── */
+.tech-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 32px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-secondary-light);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: default;
+    /* Grayscale by default, color on hover */
+    filter: grayscale(100%) opacity(0.7);
+}
+
+.tech-card i {
+    font-size: 28px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Premium Hover Effect */
+.tech-card:hover {
+    background: var(--color-white);
+    color: var(--color-secondary);
+    border-color: rgba(238, 57, 104, 0.2);
+    box-shadow: 0 16px 40px rgba(238, 57, 104, 0.12);
+    transform: translateY(-4px) scale(1.02);
+    filter: grayscale(0%) opacity(1);
+    z-index: 10;
+}
+
+.tech-card:hover i {
+    color: var(--color-primary);
+    /* Use Snovibox Pink */
+}
+
+/* ── Keyframes ── */
+@keyframes marqueeLeft {
+    0% {
+        /* Start at 0 */
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        /* Move left exactly half the width to seamlessly loop */
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes marqueeRight {
+    0% {
+        /* Start halfway shifted left */
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    100% {
+        /* Move right to 0 */
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .tech-card {
+        padding: 12px 24px;
+        font-size: var(--font-size-base);
+        gap: 12px;
+    }
+
+    .tech-card i {
+        font-size: 24px;
+    }
+
+    .tech-marquee-container {
+        gap: 24px;
+    }
+}

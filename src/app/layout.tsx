@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, La_Belle_Aurore } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-montserrat",
+  display: "swap",
+});
+
+const laBelleAurore = La_Belle_Aurore({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-labelle",
   display: "swap",
 });
 
@@ -39,7 +46,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${montserrat.variable} ${laBelleAurore.variable}`}>
+      <head>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
+      </head>
       <body className={montserrat.className}>{children}</body>
     </html>
   );

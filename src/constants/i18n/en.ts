@@ -66,6 +66,7 @@ export const en = {
     // ── Services ──
     services: {
         badge: "Our Services",
+        subtitle: "Our services",
         title: "Digital solutions for every need",
         description:
             "From design to production, we support your digital transformation with tailored solutions.",
@@ -165,41 +166,49 @@ export const en = {
     // ── Why Us (Home Page) ──
     whyUs: {
         badge: "✨ Why Snovibox",
+        subtitle: "Why Snovibox ?",
         title: "Trust at the heart of every project",
         description:
             "We put quality, security, and proximity at the center of our approach to build lasting partnerships.",
         stats: [
-            { icon: "🚀", number: "2020", label: "Year founded" },
-            { icon: "👨‍💻", number: "10+", label: "Team experts" },
-            { icon: "🌍", number: "5+", label: "Industry sectors" },
-            { icon: "🇨🇭", number: "100%", label: "Data in Switzerland" },
+            { icon: "fi fi-rr-rocket-lunch", number: "2020", label: "Year founded" },
+            { icon: "fi fi-rr-users-alt", number: "10+", label: "Team experts" },
+            { icon: "fi fi-rr-globe", number: "5+", label: "Industry sectors" },
+            { icon: "fi fi-rr-shield-check", number: "100%", label: "Data in Switzerland" },
         ],
         items: [
             {
-                icon: "🇨🇭",
+                icon: "fi fi-rr-shield-check",
                 title: "Swiss Hosting",
                 description:
                     "Your data is stored in Switzerland, ensuring maximum protection through strict legislation.",
             },
             {
-                icon: "🎯",
+                icon: "fi fi-rr-bullseye-pointer",
                 title: "Custom Solutions",
                 description:
                     "Every project is unique. We develop solutions fully tailored to your specific needs.",
             },
             {
-                icon: "📱",
+                icon: "fi fi-rr-mobile-button",
                 title: "Multi-Platform",
                 description:
                     "Web, mobile, and desktop applications. One team for all your platforms, with consistency and quality.",
             },
             {
-                icon: "🤝",
+                icon: "fi fi-rr-handshake",
                 title: "Local Expertise",
                 description:
                     "Based in Madagascar, we combine international technical expertise with deep local market knowledge.",
             },
         ],
+    },
+
+    // ── Technologies ──
+    technologies: {
+        badge: "Technologies",
+        subtitle: "Our stack",
+        title: "The tools we master",
     },
 
     // ── CTA ──

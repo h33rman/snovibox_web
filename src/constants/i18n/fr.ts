@@ -66,6 +66,7 @@ export const fr = {
     // ── Services ──
     services: {
         badge: "Nos Services",
+        subtitle: "Nos services",
         title: "Des solutions digitales pour chaque besoin",
         description:
             "De la conception à la mise en production, nous vous accompagnons dans votre transformation numérique avec des solutions adaptées.",
@@ -165,41 +166,49 @@ export const fr = {
     // ── Why Us (Home Page) ──
     whyUs: {
         badge: "✨ Pourquoi Snovibox",
+        subtitle: "Pourquoi Snovibox ?",
         title: "La confiance au cœur de chaque projet",
         description:
             "Nous mettons la qualité, la sécurité et la proximité au centre de notre approche pour bâtir des partenariats durables.",
         stats: [
-            { icon: "🚀", number: "2020", label: "Année de création" },
-            { icon: "👨‍💻", number: "10+", label: "Experts dans l'équipe" },
-            { icon: "🌍", number: "5+", label: "Secteurs d'activité" },
-            { icon: "🇨🇭", number: "100%", label: "Données en Suisse" },
+            { icon: "fi fi-rr-rocket-lunch", number: "2020", label: "Année de création" },
+            { icon: "fi fi-rr-users-alt", number: "10+", label: "Experts dans l'équipe" },
+            { icon: "fi fi-rr-globe", number: "5+", label: "Secteurs d'activité" },
+            { icon: "fi fi-rr-shield-check", number: "100%", label: "Données en Suisse" },
         ],
         items: [
             {
-                icon: "🇨🇭",
+                icon: "fi fi-rr-shield-check",
                 title: "Hébergement Suisse",
                 description:
                     "Vos données sont stockées en Suisse, garantissant une protection maximale grâce à une législation stricte.",
             },
             {
-                icon: "🎯",
+                icon: "fi fi-rr-bullseye-pointer",
                 title: "Solutions Sur Mesure",
                 description:
                     "Chaque projet est unique. Nous développons des solutions entièrement adaptées à vos besoins spécifiques.",
             },
             {
-                icon: "📱",
+                icon: "fi fi-rr-mobile-button",
                 title: "Multi-Plateforme",
                 description:
                     "Applications web, mobile et desktop. Une seule équipe pour toutes vos plateformes, avec cohérence et qualité.",
             },
             {
-                icon: "🤝",
+                icon: "fi fi-rr-handshake",
                 title: "Expertise Locale",
                 description:
                     "Basés à Madagascar, nous combinons expertise technique internationale et connaissance approfondie du marché local.",
             },
         ],
+    },
+
+    // ── Technologies ──
+    technologies: {
+        badge: "Technologies",
+        subtitle: "Notre stack",
+        title: "Les outils que nous maîtrisons",
     },
 
     // ── CTA ──

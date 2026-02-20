@@ -1,244 +1,238 @@
-/* ═══════ Services Intro (Home page teaser) ═══════ */
-.services-intro {
+/* ═══════ Services Carousel (Hover BG) ═══════ */
+.svc-carousel-section {
     background: var(--color-bg);
     overflow: hidden;
+    padding: 100px 0;
 }
 
-/* ── Top: headline left + CTA right ── */
-.services-intro__top {
+/* ── Header ── */
+.svc-header {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
     gap: 40px;
-    margin-bottom: 64px;
 }
 
-.services-intro__text {
-    max-width: 560px;
-}
-
-.services-intro__text h2 {
-    margin-bottom: 16px;
-}
-
-.services-intro__text p {
-    font-size: var(--font-size-base);
-    color: var(--color-secondary-light);
-}
-
-.services-intro__action .btn {
-    white-space: nowrap;
-}
-
-/* ═══════ Bento Grid ═══════ */
-.services-bento {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 24px;
-    margin-bottom: 48px;
-}
-
-.services-bento__card {
-    position: relative;
-    padding: 40px 32px;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    transition: all var(--transition-spring);
-    cursor: default;
-}
-
-/* Featured card spans full left column */
-.services-bento__card--featured {
-    grid-row: 1 / 3;
+.svc-header-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: var(--gradient-hero);
+}
+
+.svc-header-left h2 {
+    font-size: var(--font-size-4xl);
+    line-height: 1.1;
+    max-width: 500px;
+}
+
+.svc-header-right {
+    max-width: 480px;
+}
+
+.svc-header-right p {
+    font-size: var(--font-size-base);
+    color: var(--color-secondary-light);
+    margin-bottom: 24px;
+}
+
+/* ── Horizontal Track ── */
+.svc-track-container {
+    width: 100%;
+}
+
+.svc-track-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 60px;
+    /* Space for shadow & scrollbar */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    cursor: grab;
+    /* Custom Scrollbars for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) rgba(0, 0, 0, 0.04);
+}
+
+.svc-track-wrapper.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    /* Disable snap while dragging */
+    scroll-behavior: auto;
+    /* Instant scroll while dragging */
+}
+
+/* ── Custom Scrollbar Webkit ── */
+.svc-track-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.svc-track-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    margin: 0 max(24px, calc((100vw - 1152px) / 2));
+}
+
+.svc-track-wrapper::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+.svc-track-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+.svc-track-wrapper.is-dragging .svc-card {
+    pointer-events: none;
+    /* Prevent accidental clicks while dragging */
+}
+
+.svc-track {
+    display: flex;
+    gap: 24px;
+    /* Dynamically align first card with container layout */
+    padding: 0 max(24px, calc((100vw - 1152px) / 2));
+    width: max-content;
+}
+
+/* ── Card ── */
+.svc-card {
+    position: relative;
+    width: 380px;
+    height: 520px;
+    border-radius: var(--border-radius-xl);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+
+.svc-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
     border-color: transparent;
 }
 
-.services-bento__card--featured .services-bento__content h4,
-.services-bento__card--featured .services-bento__content p {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.services-bento__card--featured .services-bento__content h4 {
-    color: var(--color-white);
-    font-size: var(--font-size-xl);
-}
-
-.services-bento__card--featured .services-bento__icon {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--color-white);
-}
-
-.services-bento__card--featured .services-bento__number {
-    color: rgba(255, 255, 255, 0.08);
-}
-
-/* Hover states */
-.services-bento__card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-}
-
-.services-bento__card--featured:hover {
-    box-shadow: 0 24px 60px rgba(54, 74, 94, 0.3);
-}
-
-.services-bento__card:not(.services-bento__card--featured):hover {
-    border-color: rgba(238, 57, 104, 0.15);
-}
-
-/* ── Card icon ── */
-.services-bento__icon {
-    width: 64px;
-    height: 64px;
-    border-radius: var(--border-radius);
-    background: rgba(238, 57, 104, 0.06);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    color: var(--color-primary);
-    transition: all var(--transition-spring);
-}
-
-.services-bento__icon svg {
-    width: 32px;
-    height: 32px;
-}
-
-.services-bento__card:hover .services-bento__icon {
-    transform: scale(1.08) rotate(-3deg);
-}
-
-.services-bento__card:not(.services-bento__card--featured):hover .services-bento__icon {
-    background: #EE3968;
-    color: var(--color-white);
-    box-shadow: 0 8px 24px rgba(238, 57, 104, 0.3);
-}
-
-/* ── Card content ── */
-.services-bento__content h4 {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 8px;
-    transition: color var(--transition-fast);
-}
-
-.services-bento__content p {
-    font-size: var(--font-size-sm);
-    line-height: 1.7;
-    color: var(--color-secondary-light);
-}
-
-/* ── Step number watermark ── */
-.services-bento__number {
+/* ── Background & Overlay ── */
+.svc-card__bg {
     position: absolute;
-    top: 20px;
-    right: 24px;
-    font-size: 64px;
-    font-weight: var(--font-weight-extrabold);
-    color: rgba(0, 0, 0, 0.03);
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1;
 }
 
-/* ═══════ Also offering pills ═══════ */
-.services-intro__more {
+.svc-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.svc-card:hover .svc-card__bg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.svc-card:hover .svc-card__overlay {
+    opacity: 1;
+}
+
+/* ── Content ── */
+.svc-card__content {
+    position: relative;
+    z-index: 3;
     display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 32px 0;
-    border-top: 1px solid var(--color-border);
-}
-
-.services-intro__more-label {
-    font-size: var(--font-size-xs);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--color-secondary-light);
-    white-space: nowrap;
-}
-
-.services-intro__pills {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.services-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-full);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-secondary);
-    transition: all var(--transition-base);
-    cursor: default;
-}
-
-.services-pill:hover {
-    background: var(--color-white);
-    border-color: rgba(238, 57, 104, 0.2);
-    color: var(--color-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-}
-
-.services-pill__icon {
-    width: 20px;
-    height: 20px;
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    transition: color var(--transition-fast);
-}
-
-.services-pill__icon svg {
-    width: 100%;
+    flex-direction: column;
     height: 100%;
+    padding: 48px 36px;
 }
 
-/* ═══════ Responsive ═══════ */
+.svc-card__icon i {
+    font-size: 40px;
+    color: var(--color-primary);
+    transition: color 0.4s ease;
+}
+
+.svc-card:hover .svc-card__icon i {
+    color: var(--color-white);
+}
+
+.svc-card__text {
+    margin-top: auto;
+}
+
+.svc-card__text h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+    transition: color 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.svc-card__text p {
+    font-size: var(--font-size-base);
+    color: var(--color-secondary-light);
+    line-height: 1.6;
+    transition: color 0.4s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: 0.05s;
+}
+
+.svc-card:hover .svc-card__text h3 {
+    color: var(--color-white);
+    transform: translateY(-4px);
+}
+
+.svc-card:hover .svc-card__text p {
+    color: rgba(255, 255, 255, 0.85);
+    transform: translateY(-4px);
+}
+
+/* Spacer for end of track alignment */
+.svc-spacer {
+    width: max(24px, calc((100vw - 1152px) / 2));
+}
+
+/* ── Responsive ── */
 @media (max-width: 1024px) {
-    .services-intro__top {
+    .svc-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
+        margin-bottom: 40px;
     }
 
-    .services-bento {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .services-bento__card--featured {
-        grid-row: auto;
+    .svc-card {
+        width: 320px;
+        height: 480px;
     }
 }
 
 @media (max-width: 768px) {
-    .services-intro__more {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
+    .svc-card {
+        width: 280px;
+        height: 420px;
     }
 
-    .services-bento__card {
+    .svc-card__content {
         padding: 32px 24px;
+    }
+
+    .svc-card__icon i {
+        font-size: 32px;
+    }
+
+    .svc-card__text h3 {
+        font-size: var(--font-size-xl);
     }
 }
