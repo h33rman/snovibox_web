@@ -11,14 +11,7 @@
 
 /* ── Embedded CTA Card ── */
 .footer-cta-card {
-    background-color: var(--color-primary);
-    /* Fallback */
-    background-image:
-        url('/assets/patterns/footer_bg.svg'),
-        var(--gradient-hero);
-    background-size: cover, auto;
-    background-position: center, center;
-    background-blend-mode: soft-light, normal;
+    background: var(--gradient-hero);
     border-radius: var(--border-radius-xl);
     padding: 64px 80px;
     display: flex;
@@ -34,6 +27,7 @@
     overflow: hidden;
 }
 
+/* Base Light Glow Overlay */
 .footer-cta-card::before {
     content: '';
     position: absolute;
@@ -44,6 +38,20 @@
     background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 60%);
     pointer-events: none;
     z-index: 0;
+}
+
+/* User's Pattern Overlay */
+.footer-cta-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/patterns/footer_bg.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    /* PRECISE CONTROL: Extremely subtle, barely visible */
+    pointer-events: none;
+    z-index: 1;
 }
 
 .footer-cta-content {
