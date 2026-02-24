@@ -1,0 +1,212 @@
+/* ═══════ Dedicated Services Page ═══════ */
+.services-page-header {
+    background: var(--color-bg);
+    padding: 160px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-page-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(238, 57, 104, 0.05) 0%, transparent 60%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.services-page-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+.services-page-header h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-secondary);
+    margin: 16px 0;
+    line-height: 1.1;
+}
+
+.services-page-header p {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── Services Wide Alternating Layout ── */
+.services-page-list {
+    background: var(--color-bg);
+}
+
+.service-row {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.service-row:last-child {
+    border-bottom: none;
+}
+
+/* Alternate Backgrounds */
+.service-row:nth-child(even) {
+    background: var(--color-snow);
+}
+
+/* ── Giant Background Number ── */
+.service-number {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32vw;
+    font-weight: var(--font-weight-extrabold);
+    color: rgba(0, 0, 0, 0.02);
+    line-height: 0.8;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    font-family: var(--font-family);
+}
+
+.service-row:nth-child(odd) .service-number {
+    right: -5%;
+}
+
+.service-row:nth-child(even) .service-number {
+    left: -5%;
+}
+
+/* ── Split Content Grid ── */
+.service-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Reverse Order for Even Rows */
+.service-row:nth-child(even) .service-split-grid .service-text-content {
+    order: 2;
+}
+
+.service-row:nth-child(even) .service-split-grid .service-graphic {
+    order: 1;
+}
+
+/* ── Text Content ── */
+.service-text-content .icon-wrap {
+    font-size: 48px;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.service-text-content h2 {
+    font-size: var(--font-size-3xl);
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.service-text-content p {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-500);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* ── Features List ── */
+.service-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.service-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: var(--font-size-base);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}
+
+.service-features-list li i {
+    color: var(--color-primary);
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+/* ── Graphic Abstract ── */
+.service-graphic {
+    background: var(--gradient-hero);
+    border-radius: var(--border-radius-xl);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle overlay pattern on the graphic */
+.service-graphic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/patterns/footer_bg.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Inner Glow Ring */
+.service-graphic::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.05);
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+    .service-split-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .service-row:nth-child(even) .service-split-grid .service-text-content {
+        order: 1;
+    }
+
+    .service-row:nth-child(even) .service-split-grid .service-graphic {
+        order: 2;
+    }
+
+    .service-number {
+        font-size: 50vw;
+        top: 20%;
+    }
+
+    .service-row {
+        padding: 80px 0;
+    }
+}

@@ -49,6 +49,7 @@ export default function RootLayout({
     <html lang="fr" className={`${montserrat.variable} ${laBelleAurore.variable}`}>
       <head>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css' />
       </head>
       <body className={montserrat.className}>{children}</body>
     </html>

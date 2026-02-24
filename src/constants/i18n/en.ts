@@ -74,40 +74,46 @@ export const en = {
         alsoOffering: "Also offering",
         items: [
             {
+                slug: "web-mobile-apps",
                 icon: "📱",
                 title: "Web & Mobile Applications",
-                description:
-                    "Custom cross-platform applications tailored to your business processes and brand identity.",
+                description: "Custom cross-platform applications tailored to your business processes and brand identity.",
+                features: ["Next.js & React Architecture", "Native iOS & Android Apps", "Secure Cloud Hosting (Switzerland)", "REST API & Custom Integrations"],
             },
             {
+                slug: "ux-ui-design",
                 icon: "🎨",
                 title: "UX/UI Design",
-                description:
-                    "Intuitive and elegant interface design that delivers an optimal user experience on every screen.",
+                description: "Intuitive and elegant interface design that delivers an optimal user experience on every screen.",
+                features: ["User Experience Audits", "Interactive Figma Prototyping", "Comprehensive Design Systems", "User Testing & Optimization"],
             },
             {
+                slug: "odoo-erp",
                 icon: "⚙️",
                 title: "Odoo ERP",
-                description:
-                    "Implementation and configuration of Odoo ERP to digitalize and automate your business management.",
+                description: "Implementation and configuration of Odoo ERP to digitalize and automate your business management.",
+                features: ["Custom Module Development", "CRM & Invoicing Integration", "Inventory & Supply Chain Management", "Team Training & Workshops"],
             },
             {
+                slug: "hardware-deployment",
                 icon: "🖥️",
                 title: "Hardware Deployment",
-                description:
-                    "Setup and configuration of IT hardware adapted to your on-site infrastructure.",
+                description: "Setup and configuration of IT hardware adapted to your on-site infrastructure.",
+                features: ["Existing Infrastructure Auditing", "Server & Rack Installations", "Cabling & Network Architecture", "Workstation Procurement"],
             },
             {
+                slug: "agriculture-farming",
                 icon: "🌾",
                 title: "Agriculture & Farming Solutions",
-                description:
-                    "Digital tools dedicated to agriculture, aquaculture, and farming sectors to optimize production.",
+                description: "Digital tools dedicated to agriculture, aquaculture, and farming sectors to optimize production.",
+                features: ["Field-based IoT Sensors", "Real-time Weather Tracking", "Herd & Crop Management Platforms", "Yield Analytics Dashboards"],
             },
             {
+                slug: "geolocation",
                 icon: "📍",
                 title: "Geolocation",
-                description:
-                    "Real-time tracking and geolocation solutions for fleet, terrain, and resource management.",
+                description: "Real-time tracking and geolocation solutions for fleet, terrain, and resource management.",
+                features: ["Vehicle Fleet GPS Tracking", "Automated Geofencing Alerts", "Detailed Route History Logs", "Consumption & Maintenance Reports"],
             },
         ],
     },
@@ -236,8 +242,7 @@ export const en = {
             description: "Join the companies that trust Snovibox for their digital transformation.",
             buttonText: "Get started now",
         },
-        description:
-            "Study and implementation of sustainable digital solutions. Web and mobile applications, UX/UI design, ERP, and hardware deployment.",
+        description: "Your Digital Partner",
         columns: {
             navigation: "Navigation",
             services: "Services",

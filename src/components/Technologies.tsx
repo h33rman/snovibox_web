@@ -6,22 +6,22 @@ import { AnimatedSection } from "@/widgets";
 
 // Track 1 Tech Stack
 const techTrack1 = [
-    { name: "React", icon: "fi fi-brands-react" },
-    { name: "Next.js", icon: "fi fi-brands-node-js" }, // Flaticon UIcons doesn't have nextjs yet, placeholder
-    { name: "TypeScript", icon: "fi fi-rr-code-commit" },
-    { name: "Node.js", icon: "fi fi-brands-node-js" },
-    { name: "Python", icon: "fi fi-brands-python" },
-    { name: "Figma", icon: "fi fi-brands-figma" },
+    { name: "React", img: "/assets/logos/tech/react-native-1.svg" },
+    { name: "Next.js", img: "/assets/logos/tech/next-js.svg" },
+    { name: "Node.js", img: "/assets/logos/tech/nodejs-ar21.svg" },
+    { name: "Python", img: "/assets/logos/tech/python-5.svg" },
+    { name: "PHP", img: "/assets/logos/tech/php-6.svg" },
+    { name: "Figma", img: "/assets/logos/tech/figma-icon.svg" },
 ];
 
 // Track 2 Tech Stack
 const techTrack2 = [
-    { name: "Odoo", icon: "fi fi-rr-database" },
-    { name: "AWS", icon: "fi fi-brands-aws" },
-    { name: "Docker", icon: "fi fi-brands-docker" },
-    { name: "PostgreSQL", icon: "fi fi-rr-database" },
-    { name: "TailwindCSS", icon: "fi fi-rr-paintbrush" },
-    { name: "React Native", icon: "fi fi-brands-apple" },
+    { name: "Odoo", img: "/assets/logos/tech/odoo.svg" },
+    { name: "AWS", img: "/assets/logos/tech/aws-2.svg" },
+    { name: "Docker", img: "/assets/logos/tech/docker-4.svg" },
+    { name: "PostgreSQL", img: "/assets/logos/tech/postgresql-inc.svg" },
+    { name: "TailwindCSS", img: "/assets/logos/tech/tailwindcss.svg" },
+    { name: "Flutter", img: "/assets/logos/tech/flutter-logo.svg" },
 ];
 
 export function Technologies() {
@@ -45,7 +45,7 @@ export function Technologies() {
                         {/* Render twice for infinite seam */}
                         {[...techTrack1, ...techTrack1].map((tech, i) => (
                             <div key={`t1-${i}`} className="tech-card">
-                                <i className={tech.icon}></i>
+                                <img src={tech.img} alt={tech.name} className="tech-icon-img" />
                                 <span>{tech.name}</span>
                             </div>
                         ))}
@@ -58,7 +58,7 @@ export function Technologies() {
                         {/* Render twice for infinite seam */}
                         {[...techTrack2, ...techTrack2].map((tech, i) => (
                             <div key={`t2-${i}`} className="tech-card">
-                                <i className={tech.icon}></i>
+                                <img src={tech.img} alt={tech.name} className="tech-icon-img" />
                                 <span>{tech.name}</span>
                             </div>
                         ))}

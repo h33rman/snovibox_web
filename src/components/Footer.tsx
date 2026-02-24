@@ -36,10 +36,9 @@ export function Footer() {
                 <div className="footer-grid">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <div className="logo-icon">S</div>
-                            {COMPANY.name.toUpperCase()}
+                            <img src="/assets/logos/website/wide-logo-white.svg" alt="Snovibox Logo" style={{ height: '64px', width: 'auto' }} />
                         </div>
-                        <p>{t.footer.description}</p>
+                        <span className="subtitle-handwriting footer-slogan">{t.footer.description}</span>
                     </div>
 
                     <div className="footer-col">
@@ -60,13 +59,27 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div className="footer-col">
+                    <div className="footer-col footer-contact-col">
                         <h4>{t.footer.columns.contact}</h4>
                         <ul>
-                            <li><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></li>
-                            <li><a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}>{COMPANY.phone}</a></li>
-                            <li><a href={`tel:${COMPANY.phoneAlt.replace(/\s/g, "")}`}>{COMPANY.phoneAlt}</a></li>
-                            <li><a href="#contact">Antananarivo, Madagascar</a></li>
+                            <li>
+                                <a href={`mailto:${COMPANY.email}`}>
+                                    <i className="fi fi-rr-envelope"></i>
+                                    {COMPANY.email}
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}>
+                                    <i className="fi fi-rr-phone-call"></i>
+                                    {COMPANY.phone}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact">
+                                    <i className="fi fi-rr-marker"></i>
+                                    Antananarivo, Madagascar
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

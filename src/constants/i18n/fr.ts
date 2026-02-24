@@ -74,40 +74,46 @@ export const fr = {
         alsoOffering: "Aussi proposé",
         items: [
             {
+                slug: "web-mobile-apps",
                 icon: "📱",
                 title: "Applications Web & Mobile",
-                description:
-                    "Développement d'applications sur mesure, multi-plateformes, adaptées à vos processus métier et à votre identité.",
+                description: "Développement d'applications sur mesure, multi-plateformes, adaptées à vos processus métier et à votre identité.",
+                features: ["Architecture Next.js & React App", "Applications iOS & Android natives", "Hébergement Cloud Sécurisé (Suisse)", "API REST & Intégrations sur-mesure"],
             },
             {
+                slug: "ux-ui-design",
                 icon: "🎨",
                 title: "UX/UI Design",
-                description:
-                    "Conception d'interfaces intuitives et élégantes qui offrent une expérience utilisateur optimale sur tous les écrans.",
+                description: "Conception d'interfaces intuitives et élégantes qui offrent une expérience utilisateur optimale sur tous les écrans.",
+                features: ["Audit d'Expérience Utilisateur", "Prototypage Interactif Figma", "Création de Design Systems complets", "Tests Utilisateurs & Optimisation"],
             },
             {
+                slug: "odoo-erp",
                 icon: "⚙️",
                 title: "ERP Odoo",
-                description:
-                    "Implémentation et configuration de l'ERP Odoo pour digitaliser et automatiser la gestion de votre entreprise.",
+                description: "Implémentation et configuration de l'ERP Odoo pour digitaliser et automatiser la gestion de votre entreprise.",
+                features: ["Développement de Modules Spécifiques", "Intégration CRM & Facturation", "Gestion d'Inventaire & Chaîne logistique", "Formation des équipes"],
             },
             {
+                slug: "hardware-deployment",
                 icon: "🖥️",
                 title: "Déploiement Hardware",
-                description:
-                    "Mise en place et configuration de matériel informatique adapté à vos infrastructures sur le terrain.",
+                description: "Mise en place et configuration de matériel informatique adapté à vos infrastructures sur le terrain.",
+                features: ["Audit des infrastructures existantes", "Installation de Serveurs & Baies", "Câblage & Architecture réseau", "Fourniture de postes de travail"],
             },
             {
+                slug: "agriculture-farming",
                 icon: "🌾",
                 title: "Solutions Agriculture & Élevage",
-                description:
-                    "Outils digitaux dédiés aux secteurs agriculture, pisciculture et élevage pour optimiser la production.",
+                description: "Outils digitaux dédiés aux secteurs agriculture, pisciculture et élevage pour optimiser la production.",
+                features: ["Capteurs IoT sur le terrain", "Suivi météorologique en temps réel", "Plateformes de gestion de troupeaux", "Dashboard d'analyse des rendements"],
             },
             {
+                slug: "geolocation",
                 icon: "📍",
                 title: "Géolocalisation",
-                description:
-                    "Solutions de tracking et géolocalisation en temps réel pour la gestion de flottes, terrains et ressources.",
+                description: "Solutions de tracking et géolocalisation en temps réel pour la gestion de flottes, terrains et ressources.",
+                features: ["Tracking GPS de flotte automobile", "Alertes de Geofencing automatiques", "Historique de trajets détaillé", "Rapports de consommation & maintenance"],
             },
         ],
     },
@@ -236,8 +242,7 @@ export const fr = {
             description: "Rejoignez les entreprises qui font confiance à Snovibox pour leur transformation digitale.",
             buttonText: "Commencer maintenant",
         },
-        description:
-            "Étude et mise en œuvre de solutions digitales durables. Applications web et mobile, UX/UI design, ERP et déploiement hardware.",
+        description: "Votre partenaire Digitale",
         columns: {
             navigation: "Navigation",
             services: "Services",

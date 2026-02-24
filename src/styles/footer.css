@@ -1,7 +1,7 @@
 /* ═══════ Footer ═══════ */
 .footer {
-    background: #0d0f17;
-    color: var(--color-gray-300);
+    background: var(--gradient-hero);
+    color: var(--color-white);
     padding: 0 0 0;
     /* Removing top padding since CTA handles spacing */
     position: relative;
@@ -11,7 +11,9 @@
 
 /* ── Embedded CTA Card ── */
 .footer-cta-card {
-    background: var(--gradient-hero);
+    background: #0d0f17;
+    /* Solid dark color adapted to footer BG */
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--border-radius-xl);
     padding: 64px 80px;
     display: flex;
@@ -20,22 +22,22 @@
     gap: 40px;
     transform: translateY(-80px);
     /* Pulls it up over the previous section */
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
     margin-bottom: -20px;
     /* Offset the negative transform */
     position: relative;
     overflow: hidden;
 }
 
-/* Base Light Glow Overlay */
+/* Subtle Glow behind CTA Text */
 .footer-cta-card::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -50%;
+    left: -20%;
     width: 60%;
-    height: 100%;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15), transparent 60%);
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
 }
@@ -48,8 +50,8 @@
     background-image: url('/assets/patterns/footer_bg.svg');
     background-size: cover;
     background-position: center;
-    opacity: 0.1;
-    /* PRECISE CONTROL: Extremely subtle, barely visible */
+    opacity: 0.03;
+    /* Extremely subtle */
     pointer-events: none;
     z-index: 1;
 }
@@ -68,7 +70,7 @@
 }
 
 .footer-cta-content p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.7);
     font-size: var(--font-size-lg);
 }
 
@@ -81,12 +83,14 @@
 .footer-cta-action .btn {
     padding: 16px 40px;
     font-size: var(--font-size-base);
-    background: var(--color-white);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
 }
 
 .footer-cta-action .btn:hover {
-    box-shadow: 0 16px 40px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 16px 40px rgba(238, 57, 104, 0.35);
+    transform: translateY(-3px);
 }
 
 /* ── Main Footer Grid ── */
@@ -99,12 +103,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer-brand p {
-    color: var(--color-gray-500);
-    font-size: var(--font-size-sm);
-    margin-top: 20px;
-    line-height: 1.8;
-    max-width: 320px;
+.footer-slogan {
+    margin-top: 16px;
+    font-size: 32px;
+    /* Scale specifically for footer */
+    color: var(--color-white);
+    display: block;
 }
 
 .footer-brand .footer-logo {
@@ -133,7 +137,7 @@
 
 .footer-col h4 {
     color: var(--color-white);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -147,12 +151,18 @@
 }
 
 .footer-col ul li a {
-    color: var(--color-gray-500);
+    color: rgba(255, 255, 255, 0.85);
     font-size: var(--font-size-sm);
     transition: all var(--transition-base);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+}
+
+.footer-contact-col i {
+    font-size: 16px;
+    color: var(--color-primary-light);
+    margin-top: 2px;
 }
 
 .footer-col ul li a:hover {
@@ -170,7 +180,7 @@
 
 .footer-bottom p {
     font-size: var(--font-size-sm);
-    color: var(--color-gray-500);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-socials {
@@ -186,7 +196,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-gray-400);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 16px;
     transition: all var(--transition-spring);
     background: rgba(255, 255, 255, 0.02);

@@ -26,12 +26,13 @@ export function Navbar() {
             <nav className={`navbar ${isScrolled ? "scrolled" : "transparent"}`}>
                 <div className="container">
                     {/* Logo */}
-                    <Link href="/" className="nav-logo">
-                        <div className="logo-icon">
-                            <span>S</span>
-                            <div className="logo-icon__pulse"></div>
-                        </div>
-                        <span className="logo-text">SNOVIBOX</span>
+                    <Link href="/" className="nav-logo" onClick={() => setMobileOpen(false)}>
+                        <img
+                            src={isScrolled ? "/assets/logos/website/wide-logo-on-white.svg" : "/assets/logos/website/wide-logo-white.svg"}
+                            alt="Snovibox Logo"
+                            className="nav-brand-img"
+                            style={{ height: "36px", width: "auto" }}
+                        />
                     </Link>
 
                     {/* Center links */}
