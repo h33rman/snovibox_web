@@ -75,45 +75,75 @@ export const fr = {
         items: [
             {
                 slug: "web-mobile-apps",
-                icon: "📱",
+                subtitle: "Votre vision, codée",
                 title: "Applications Web & Mobile",
                 description: "Développement d'applications sur mesure, multi-plateformes, adaptées à vos processus métier et à votre identité.",
-                features: ["Architecture Next.js & React App", "Applications iOS & Android natives", "Hébergement Cloud Sécurisé (Suisse)", "API REST & Intégrations sur-mesure"],
+                features: [
+                    { icon: "fi-rr-code-branch", text: "Architecture Next.js & React App" },
+                    { icon: "fi-rr-smartphone", text: "Applications iOS & Android natives" },
+                    { icon: "fi-rr-shield", text: "Hébergement Cloud Sécurisé (Suisse)" },
+                    { icon: "fi-rr-bolt", text: "API REST & Intégrations sur-mesure" }
+                ],
             },
             {
                 slug: "ux-ui-design",
-                icon: "🎨",
+                subtitle: "Conçu pour l'humain",
                 title: "UX/UI Design",
                 description: "Conception d'interfaces intuitives et élégantes qui offrent une expérience utilisateur optimale sur tous les écrans.",
-                features: ["Audit d'Expérience Utilisateur", "Prototypage Interactif Figma", "Création de Design Systems complets", "Tests Utilisateurs & Optimisation"],
+                features: [
+                    { icon: "fi-rr-search", text: "Audit d'Expérience Utilisateur" },
+                    { icon: "fi-rr-edit", text: "Prototypage Interactif Figma" },
+                    { icon: "fi-rr-apps", text: "Création de Design Systems complets" },
+                    { icon: "fi-rr-settings", text: "Tests Utilisateurs & Optimisation" }
+                ],
             },
             {
                 slug: "odoo-erp",
-                icon: "⚙️",
+                subtitle: "Optimisez votre activité",
                 title: "ERP Odoo",
                 description: "Implémentation et configuration de l'ERP Odoo pour digitaliser et automatiser la gestion de votre entreprise.",
-                features: ["Développement de Modules Spécifiques", "Intégration CRM & Facturation", "Gestion d'Inventaire & Chaîne logistique", "Formation des équipes"],
+                features: [
+                    { icon: "fi-rr-grid", text: "Développement de Modules Spécifiques" },
+                    { icon: "fi-rr-users", text: "Intégration CRM & Facturation" },
+                    { icon: "fi-rr-box", text: "Gestion d'Inventaire & Chaîne logistique" },
+                    { icon: "fi-rr-user-add", text: "Formation des équipes" }
+                ],
             },
             {
                 slug: "hardware-deployment",
-                icon: "🖥️",
+                subtitle: "Une infrastructure robuste",
                 title: "Déploiement Hardware",
                 description: "Mise en place et configuration de matériel informatique adapté à vos infrastructures sur le terrain.",
-                features: ["Audit des infrastructures existantes", "Installation de Serveurs & Baies", "Câblage & Architecture réseau", "Fourniture de postes de travail"],
+                features: [
+                    { icon: "fi-rr-globe", text: "Audit des infrastructures existantes" },
+                    { icon: "fi-rr-database", text: "Installation de Serveurs & Baies" },
+                    { icon: "fi-rr-cloud", text: "Câblage & Architecture réseau" },
+                    { icon: "fi-rr-desktop", text: "Fourniture de postes de travail" }
+                ],
             },
             {
                 slug: "agriculture-farming",
-                icon: "🌾",
+                subtitle: "Cultivez l'avenir",
                 title: "Solutions Agriculture & Élevage",
                 description: "Outils digitaux dédiés aux secteurs agriculture, pisciculture et élevage pour optimiser la production.",
-                features: ["Capteurs IoT sur le terrain", "Suivi météorologique en temps réel", "Plateformes de gestion de troupeaux", "Dashboard d'analyse des rendements"],
+                features: [
+                    { icon: "fi-rr-rss", text: "Capteurs IoT sur le terrain" },
+                    { icon: "fi-rr-brightness", text: "Suivi météorologique en temps réel" },
+                    { icon: "fi-rr-list-check", text: "Plateformes de gestion de troupeaux" },
+                    { icon: "fi-rr-chart-pie", text: "Dashboard d'analyse des rendements" }
+                ],
             },
             {
                 slug: "geolocation",
-                icon: "📍",
+                subtitle: "Toujours sur la carte",
                 title: "Géolocalisation",
                 description: "Solutions de tracking et géolocalisation en temps réel pour la gestion de flottes, terrains et ressources.",
-                features: ["Tracking GPS de flotte automobile", "Alertes de Geofencing automatiques", "Historique de trajets détaillé", "Rapports de consommation & maintenance"],
+                features: [
+                    { icon: "fi-rr-map-marker", text: "Tracking GPS de flotte automobile" },
+                    { icon: "fi-rr-bell", text: "Alertes de Geofencing automatiques" },
+                    { icon: "fi-rr-clock", text: "Historique de trajets détaillé" },
+                    { icon: "fi-rr-document", text: "Rapports de consommation & maintenance" }
+                ],
             },
         ],
     },
@@ -257,4 +287,61 @@ export const fr = {
         ],
         copyright: "Tous droits réservés.",
     },
+    aboutPage: {
+        hero: {
+            badge: "Développez votre entreprise avec nous",
+            title: "À propos de Snovibox",
+            subtitle: "nous menons la révolution numérique",
+            description: ""
+        },
+        story: {
+            badge: "Approche Créative",
+            headline: "Fournir des solutions d'affaires avancées.",
+            paragraphs: [
+                "Snovibox est une agence digitale de premier plan fondée à Antananarivo, Madagascar, en 2020. Nous sommes animés d'une passion commune pour le code élégant et le design transformateur. Notre équipe d'ingénieurs et de designers conçoit des applications robustes sur mesure, des ERP évolutifs et des infrastructures matérielles sécurisées.",
+                "Nous collaborons avec des entreprises visionnaires à travers le monde pour combler le fossé entre les défis techniques complexes et les solutions intuitives centrées sur l'humain — tout en maintenant un engagement sans faille envers les normes suisses de protection des données."
+            ],
+            progressBars: [
+                { label: "Croissance des affaires", percentage: "98%" },
+                { label: "Nouvelle technologie", percentage: "85%" }
+            ]
+        },
+        stats: [
+            { number: "2020", label: "Année de création" },
+            { number: "50+", label: "Projets livrés" },
+            { number: "10+", label: "Experts Tech" },
+            { number: "100%", label: "Données en Suisse" }
+        ],
+        values: {
+            badge: "Notre ADN",
+            title: "Les principes qui guident notre travail.",
+            items: [
+                {
+                    icon: "fi-rr-gem",
+                    title: "Qualité Implacable",
+                    description: "Chaque ligne de code et chaque pixel est conçu avec une attention obsessionnelle aux détails."
+                },
+                {
+                    icon: "fi-rr-shield-check",
+                    title: "Sécurité Intransigeante",
+                    description: "La sécurité de vos données est notre priorité absolue, soutenue par les strictes normes de confidentialité."
+                },
+                {
+                    icon: "fi-rr-lightbulb-on",
+                    title: "Vision d'Avenir",
+                    description: "Nous exploitons les technologies de pointe pour pérenniser vos investissements numériques."
+                },
+                {
+                    icon: "fi-rr-users",
+                    title: "Véritable Partenariat",
+                    description: "Nous alignons notre succès directement sur le vôtre, en favorisant des relations transparentes à long terme."
+                }
+            ]
+        },
+        cta: {
+            title: "Prêt à accélérer votre croissance ?",
+            description: "Contactez-nous pour découvrir comment nos solutions digitales sur mesure peuvent transformer vos processus.",
+            buttonText: "Démarrer une conversation"
+        }
+    }
 };

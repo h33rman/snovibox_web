@@ -75,45 +75,75 @@ export const en = {
         items: [
             {
                 slug: "web-mobile-apps",
-                icon: "📱",
+                subtitle: "Your vision, engineered",
                 title: "Web & Mobile Applications",
                 description: "Custom cross-platform applications tailored to your business processes and brand identity.",
-                features: ["Next.js & React Architecture", "Native iOS & Android Apps", "Secure Cloud Hosting (Switzerland)", "REST API & Custom Integrations"],
+                features: [
+                    { icon: "fi-rr-code-branch", text: "Next.js & React Architecture" },
+                    { icon: "fi-rr-smartphone", text: "Native iOS & Android Apps" },
+                    { icon: "fi-rr-shield", text: "Secure Cloud Hosting (Switzerland)" },
+                    { icon: "fi-rr-bolt", text: "REST API & Custom Integrations" }
+                ],
             },
             {
                 slug: "ux-ui-design",
-                icon: "🎨",
+                subtitle: "Designed for humans",
                 title: "UX/UI Design",
                 description: "Intuitive and elegant interface design that delivers an optimal user experience on every screen.",
-                features: ["User Experience Audits", "Interactive Figma Prototyping", "Comprehensive Design Systems", "User Testing & Optimization"],
+                features: [
+                    { icon: "fi-rr-search", text: "User Experience Audits" },
+                    { icon: "fi-rr-edit", text: "Interactive Figma Prototyping" },
+                    { icon: "fi-rr-apps", text: "Comprehensive Design Systems" },
+                    { icon: "fi-rr-settings", text: "User Testing & Optimization" }
+                ],
             },
             {
                 slug: "odoo-erp",
-                icon: "⚙️",
+                subtitle: "Streamline your business",
                 title: "Odoo ERP",
                 description: "Implementation and configuration of Odoo ERP to digitalize and automate your business management.",
-                features: ["Custom Module Development", "CRM & Invoicing Integration", "Inventory & Supply Chain Management", "Team Training & Workshops"],
+                features: [
+                    { icon: "fi-rr-grid", text: "Custom Module Development" },
+                    { icon: "fi-rr-users", text: "CRM & Invoicing Integration" },
+                    { icon: "fi-rr-box", text: "Inventory & Supply Chain Management" },
+                    { icon: "fi-rr-user-add", text: "Team Training & Workshops" }
+                ],
             },
             {
                 slug: "hardware-deployment",
-                icon: "🖥️",
+                subtitle: "Rock-solid infrastructure",
                 title: "Hardware Deployment",
                 description: "Setup and configuration of IT hardware adapted to your on-site infrastructure.",
-                features: ["Existing Infrastructure Auditing", "Server & Rack Installations", "Cabling & Network Architecture", "Workstation Procurement"],
+                features: [
+                    { icon: "fi-rr-globe", text: "Existing Infrastructure Auditing" },
+                    { icon: "fi-rr-database", text: "Server & Rack Installations" },
+                    { icon: "fi-rr-cloud", text: "Cabling & Network Architecture" },
+                    { icon: "fi-rr-desktop", text: "Workstation Procurement" }
+                ],
             },
             {
                 slug: "agriculture-farming",
-                icon: "🌾",
+                subtitle: "Farming the future",
                 title: "Agriculture & Farming Solutions",
                 description: "Digital tools dedicated to agriculture, aquaculture, and farming sectors to optimize production.",
-                features: ["Field-based IoT Sensors", "Real-time Weather Tracking", "Herd & Crop Management Platforms", "Yield Analytics Dashboards"],
+                features: [
+                    { icon: "fi-rr-rss", text: "Field-based IoT Sensors" },
+                    { icon: "fi-rr-brightness", text: "Real-time Weather Tracking" },
+                    { icon: "fi-rr-list-check", text: "Herd & Crop Management Platforms" },
+                    { icon: "fi-rr-chart-pie", text: "Yield Analytics Dashboards" }
+                ],
             },
             {
                 slug: "geolocation",
-                icon: "📍",
+                subtitle: "Always on the map",
                 title: "Geolocation",
                 description: "Real-time tracking and geolocation solutions for fleet, terrain, and resource management.",
-                features: ["Vehicle Fleet GPS Tracking", "Automated Geofencing Alerts", "Detailed Route History Logs", "Consumption & Maintenance Reports"],
+                features: [
+                    { icon: "fi-rr-map-marker", text: "Vehicle Fleet GPS Tracking" },
+                    { icon: "fi-rr-bell", text: "Automated Geofencing Alerts" },
+                    { icon: "fi-rr-clock", text: "Detailed Route History Logs" },
+                    { icon: "fi-rr-document", text: "Consumption & Maintenance Reports" }
+                ],
             },
         ],
     },
@@ -257,4 +287,61 @@ export const en = {
         ],
         copyright: "All rights reserved.",
     },
+    aboutPage: {
+        hero: {
+            badge: "Grow your business with us",
+            title: "About Snovibox",
+            subtitle: "we lead the digital revolution",
+            description: ""
+        },
+        story: {
+            badge: "Creative Approach",
+            headline: "Provide advanced business solutions.",
+            paragraphs: [
+                "Snovibox is a premier digital agency founded in Antananarivo, Madagascar in 2020. We are driven by a shared passion for elegant code and transformative design. Our team of engineers and designers build custom-tailored robust applications, scalable ERPs, and secure hardware infrastructures.",
+                "We partner with visionary companies across the globe to bridge the gap between complex technical challenges and intuitive, human-centric solutions—all while maintaining our uncompromising commitment to Swiss-level data protection standards."
+            ],
+            progressBars: [
+                { label: "Business Growth", percentage: "98%" },
+                { label: "New Technology", percentage: "85%" }
+            ]
+        },
+        stats: [
+            { number: "2020", label: "Year Founded" },
+            { number: "50+", label: "Projects Delivered" },
+            { number: "10+", label: "Tech Experts" },
+            { number: "100%", label: "Swiss Hosted" }
+        ],
+        values: {
+            badge: "Our DNA",
+            title: "The principles that guide our work.",
+            items: [
+                {
+                    icon: "fi-rr-gem",
+                    title: "Relentless Quality",
+                    description: "Every line of code and every pixel is crafted with an obsessive attention to detail."
+                },
+                {
+                    icon: "fi-rr-shield-check",
+                    title: "Uncompromising Security",
+                    description: "Your data's safety is our paramount concern, backed by strict privacy standards."
+                },
+                {
+                    icon: "fi-rr-lightbulb-on",
+                    title: "Forward-Thinking",
+                    description: "We leverage bleeding-edge technologies to future-proof your digital investments."
+                },
+                {
+                    icon: "fi-rr-users",
+                    title: "True Partnership",
+                    description: "We align our success directly with yours, fostering transparent, long-term relationships."
+                }
+            ]
+        },
+        cta: {
+            title: "Ready to accelerate your growth?",
+            description: "Let's connect and explore how our bespoke digital solutions can transform your operations.",
+            buttonText: "Start a Conversation"
+        }
+    }
 };

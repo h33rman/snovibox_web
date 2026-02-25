@@ -34,9 +34,11 @@ function ServiceDetailPageContent() {
                 {/* ── Dynamic Hero ── */}
                 <section className="services-page-header">
                     <div className="container">
-                        <div className="service-detail-icon" style={{ fontSize: '72px', marginBottom: '24px' }}>
-                            {service.icon}
-                        </div>
+                        {service.subtitle && (
+                            <span className="section-subtitle" style={{ display: 'inline-block', marginBottom: '16px' }}>
+                                {service.subtitle}
+                            </span>
+                        )}
                         <h1>{service.title}</h1>
                         <p>{service.description}</p>
                     </div>

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { LanguageProvider, useLanguage } from "@/hooks";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, PageHero } from "@/components";
 
 function ServicesPageContent() {
     const { t } = useLanguage();
@@ -13,13 +13,12 @@ function ServicesPageContent() {
             <Navbar />
             <main>
                 {/* ── Page Header ── */}
-                <section className="services-page-header">
-                    <div className="container">
-                        <span className="subtitle-handwriting">{t.services.subtitle}</span>
-                        <h1>{t.services.title}</h1>
-                        <p>{t.services.description}</p>
-                    </div>
-                </section>
+                <PageHero
+                    title={t.services.title}
+                    subtitle={t.services.subtitle}
+                    description={t.services.description}
+                    image="/assets/images/about-hero-web.jpg" /* Default placeholder for now */
+                />
 
                 {/* ── Services Zig-Zag Layout ── */}
                 <section className="services-page-list">
@@ -37,17 +36,21 @@ function ServicesPageContent() {
 
                                         {/* Content Block */}
                                         <div className="service-text-content">
-                                            <div className="icon-wrap">{service.icon}</div>
+                                            {/* Beautiful Handwritten Subtitle */}
+                                            {(service as any).subtitle && (
+                                                <span className="section-subtitle">{(service as any).subtitle}</span>
+                                            )}
+
                                             <h2>{service.title}</h2>
                                             <p>{service.description}</p>
 
                                             {/* Key Features List */}
                                             {(service as any).features && (
                                                 <ul className="service-features-list">
-                                                    {(service as any).features.map((feature: string, fIndex: number) => (
+                                                    {(service as any).features.map((feature: { icon: string; text: string }, fIndex: number) => (
                                                         <li key={fIndex}>
-                                                            <i className="fi fi-rr-check-circle"></i>
-                                                            {feature}
+                                                            <i className={`fi ${feature.icon}`}></i>
+                                                            {feature.text}
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -58,9 +61,24 @@ function ServicesPageContent() {
                                             </Link>
                                         </div>
 
-                                        {/* Graphic Placeholder (Can replace with real images later) */}
-                                        <div className="service-graphic">
-                                            {/* Abstract CSS design inserted via styles, or put an <img> here */}
+                                        {/* Dynamic Masonry Collage Graphic */}
+                                        <div className="service-graphic-collage">
+                                            <div
+                                                className="collage-item img-1"
+                                                style={{ backgroundImage: `url('/assets/images/placeholder/collage-main.jpg')` }}
+                                            ></div>
+                                            <div
+                                                className="collage-item img-2"
+                                                style={{ backgroundImage: `url('/assets/images/placeholder/collage-tr.jpg')` }}
+                                            ></div>
+                                            <div
+                                                className="collage-item img-3"
+                                                style={{ backgroundImage: `url('/assets/images/placeholder/collage-br.jpg')` }}
+                                            ></div>
+                                            <div
+                                                className="collage-item img-4"
+                                                style={{ backgroundImage: `url('/assets/images/placeholder/collage-bl.jpg')` }}
+                                            ></div>
                                         </div>
 
                                     </div>

@@ -1,44 +1,4 @@
 /* ═══════ Dedicated Services Page ═══════ */
-.services-page-header {
-    background: var(--color-bg);
-    padding: 160px 0 80px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.services-page-header::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(238, 57, 104, 0.05) 0%, transparent 60%);
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.services-page-header .container {
-    position: relative;
-    z-index: 1;
-}
-
-.services-page-header h1 {
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-extrabold);
-    color: var(--color-secondary);
-    margin: 16px 0;
-    line-height: 1.1;
-}
-
-.services-page-header p {
-    font-size: var(--font-size-lg);
-    color: var(--color-gray-500);
-    max-width: 600px;
-    margin: 0 auto;
-}
 
 /* ── Services Wide Alternating Layout ── */
 .services-page-list {
@@ -104,11 +64,12 @@
 }
 
 /* ── Text Content ── */
-.service-text-content .icon-wrap {
-    font-size: 48px;
-    color: var(--color-primary);
-    margin-bottom: 24px;
+.service-text-content .section-subtitle {
     display: inline-block;
+    margin-bottom: 12px;
+    font-family: var(--font-handwriting);
+    font-size: 28px;
+    color: var(--color-primary);
 }
 
 .service-text-content h2 {
@@ -151,39 +112,82 @@
     margin-top: 2px;
 }
 
-/* ── Graphic Abstract ── */
-.service-graphic {
-    background: var(--gradient-hero);
-    border-radius: var(--border-radius-xl);
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-xl);
+/* ── Collage Image Grid (4-sides varied shapes) ── */
+.service-graphic-collage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 100%;
+    height: 480px;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.collage-item {
+    background-color: var(--color-gray-200);
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
     position: relative;
     overflow: hidden;
 }
 
-/* Subtle overlay pattern on the graphic */
-.service-graphic::before {
+.collage-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    z-index: 10 !important;
+}
+
+/* Optional pink tint overlay to match brand */
+.collage-item::after {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/assets/patterns/footer_bg.svg');
-    background-size: cover;
-    background-position: center;
+    background: var(--color-primary);
     opacity: 0.05;
-    pointer-events: none;
+    transition: opacity var(--transition-base);
 }
 
-/* Inner Glow Ring */
-.service-graphic::after {
-    content: '';
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 60px rgba(255, 255, 255, 0.05);
+.collage-item:hover::after {
+    opacity: 0;
+}
+
+/* Item 1: Large primary image (Top Left) */
+.collage-item.img-1 {
+    grid-column: 1 / 9;
+    grid-row: 1 / 10;
+    border-radius: 40px 16px 16px 16px;
+    z-index: 1;
+    background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600');
+}
+
+/* Item 2: Small (Top Right) */
+.collage-item.img-2 {
+    grid-column: 8 / 13;
+    grid-row: 2 / 7;
+    border-radius: 16px 40px 16px 16px;
+    z-index: 2;
+    background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400');
+}
+
+/* Item 3: Tall (Bottom Right) */
+.collage-item.img-3 {
+    grid-column: 7 / 12;
+    grid-row: 6 / 13;
+    border-radius: 16px 16px 40px 16px;
+    z-index: 3;
+    background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400');
+}
+
+/* Item 4: Wide (Bottom Left) */
+.collage-item.img-4 {
+    grid-column: 3 / 8;
+    grid-row: 9 / 13;
+    border-radius: 16px 16px 16px 40px;
+    z-index: 4;
+    background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=500');
 }
 
 /* ── Responsive ── */

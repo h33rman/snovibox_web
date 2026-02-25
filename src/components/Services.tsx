@@ -90,7 +90,7 @@ export function Services() {
                     >
                         <div className="svc-track">
                             {t.services.items.map(
-                                (item: { icon: string; title: string; description: string }, i: number) => (
+                                (item: { subtitle?: string; title: string; description: string }, i: number) => (
                                     <div key={i} className="svc-card">
                                         {/* Hover Background Image */}
                                         <div
