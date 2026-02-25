@@ -294,49 +294,54 @@ export const en = {
             subtitle: "we lead the digital revolution",
             description: ""
         },
-        story: {
-            badge: "Creative Approach",
-            headline: "Provide advanced business solutions.",
-            paragraphs: [
-                "Snovibox is a premier digital agency founded in Antananarivo, Madagascar in 2020. We are driven by a shared passion for elegant code and transformative design. Our team of engineers and designers build custom-tailored robust applications, scalable ERPs, and secure hardware infrastructures.",
-                "We partner with visionary companies across the globe to bridge the gap between complex technical challenges and intuitive, human-centric solutions—all while maintaining our uncompromising commitment to Swiss-level data protection standards."
+        advancedSolutions: {
+            badge: "CREATIVE APPROACH",
+            title: "Provide advanced business solutions.",
+            features: [
+                {
+                    title: "Make your business stand out.",
+                    description: "We create tailor-made solutions so you stand out."
+                },
+                {
+                    title: "Increase your conversion rate.",
+                    description: "User experience and performance optimization."
+                }
             ],
-            progressBars: [
-                { label: "Business Growth", percentage: "98%" },
-                { label: "New Technology", percentage: "85%" }
-            ]
+            btnExplore: "Explore services",
+            btnContact: "Quick contact",
+            bannerText: "Save your precious time and effort spent for finding a solution.",
+            bannerContact: "Contact us now",
         },
         stats: [
-            { number: "2020", label: "Year Founded" },
-            { number: "50+", label: "Projects Delivered" },
-            { number: "10+", label: "Tech Experts" },
-            { number: "100%", label: "Swiss Hosted" }
+            { number: "2020", title: "Year Founded.", description: "Foundation and start of our journey." },
+            { number: "10+", title: "Tech Experts.", description: "Passionate engineers and designers." },
+            { number: "5+", title: "Business Sectors.", description: "Adaptive tailored expertise." },
+            { number: "100%", title: "Swiss Hosted.", description: "Absolute data security." }
         ],
-        values: {
-            badge: "Our DNA",
-            title: "The principles that guide our work.",
-            items: [
+        creativeProcess: {
+            badge: "CREATIVE PROCESS",
+            title: "The creative process behind our projects.",
+            steps: [
                 {
-                    icon: "fi-rr-gem",
-                    title: "Relentless Quality",
-                    description: "Every line of code and every pixel is crafted with an obsessive attention to detail."
+                    number: "01",
+                    title: "Discussion of the idea",
+                    description: "Analysis of your needs and defining project objectives."
                 },
                 {
-                    icon: "fi-rr-shield-check",
-                    title: "Uncompromising Security",
-                    description: "Your data's safety is our paramount concern, backed by strict privacy standards."
+                    number: "02",
+                    title: "Handcrafted solutions",
+                    description: "Custom development of applications and tailored designs."
                 },
                 {
-                    icon: "fi-rr-lightbulb-on",
-                    title: "Forward-Thinking",
-                    description: "We leverage bleeding-edge technologies to future-proof your digital investments."
-                },
-                {
-                    icon: "fi-rr-users",
-                    title: "True Partnership",
-                    description: "We align our success directly with yours, fostering transparent, long-term relationships."
+                    number: "03",
+                    title: "Completed project",
+                    description: "Deployment, security testing, and solution delivery."
                 }
-            ]
+            ],
+            experienceCard: {
+                number: "4+",
+                text: "YEARS WORKING EXPERIENCE"
+            }
         },
         cta: {
             title: "Ready to accelerate your growth?",

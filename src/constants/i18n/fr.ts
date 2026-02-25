@@ -294,49 +294,54 @@ export const fr = {
             subtitle: "nous menons la révolution numérique",
             description: ""
         },
-        story: {
-            badge: "Approche Créative",
-            headline: "Fournir des solutions d'affaires avancées.",
-            paragraphs: [
-                "Snovibox est une agence digitale de premier plan fondée à Antananarivo, Madagascar, en 2020. Nous sommes animés d'une passion commune pour le code élégant et le design transformateur. Notre équipe d'ingénieurs et de designers conçoit des applications robustes sur mesure, des ERP évolutifs et des infrastructures matérielles sécurisées.",
-                "Nous collaborons avec des entreprises visionnaires à travers le monde pour combler le fossé entre les défis techniques complexes et les solutions intuitives centrées sur l'humain — tout en maintenant un engagement sans faille envers les normes suisses de protection des données."
+        advancedSolutions: {
+            badge: "APPROCHE CRÉATIVE",
+            title: "Fournir des solutions d'entreprise avancées.",
+            features: [
+                {
+                    title: "Faites ressortir votre entreprise.",
+                    description: "Nous créons des solutions sur mesure pour vous démarquer."
+                },
+                {
+                    title: "Augmentez votre taux de conversion.",
+                    description: "Optimisation de l'expérience utilisateur et des performances."
+                }
             ],
-            progressBars: [
-                { label: "Croissance des affaires", percentage: "98%" },
-                { label: "Nouvelle technologie", percentage: "85%" }
-            ]
+            btnExplore: "Explorer les services",
+            btnContact: "Contact rapide",
+            bannerText: "Gagnez un temps précieux dans la recherche d'une solution.",
+            bannerContact: "Contactez-nous",
         },
         stats: [
-            { number: "2020", label: "Année de création" },
-            { number: "50+", label: "Projets livrés" },
-            { number: "10+", label: "Experts Tech" },
-            { number: "100%", label: "Données en Suisse" }
+            { number: "2020", title: "Année de création.", description: "Fondation et début de nos activités." },
+            { number: "10+", title: "Experts technologiques.", description: "Développeurs passionnés." },
+            { number: "5+", title: "Secteurs d'activité.", description: "Adaptation experte." },
+            { number: "100%", title: "Données en Suisse.", description: "Sécurité garantie." }
         ],
-        values: {
-            badge: "Notre ADN",
-            title: "Les principes qui guident notre travail.",
-            items: [
+        creativeProcess: {
+            badge: "PROCESSUS CRÉATIF",
+            title: "Le processus créatif derrière nos projets.",
+            steps: [
                 {
-                    icon: "fi-rr-gem",
-                    title: "Qualité Implacable",
-                    description: "Chaque ligne de code et chaque pixel est conçu avec une attention obsessionnelle aux détails."
+                    number: "01",
+                    title: "Discussion de l'idée",
+                    description: "Analyse de vos besoins et définition des objectifs."
                 },
                 {
-                    icon: "fi-rr-shield-check",
-                    title: "Sécurité Intransigeante",
-                    description: "La sécurité de vos données est notre priorité absolue, soutenue par les strictes normes de confidentialité."
+                    number: "02",
+                    title: "Solutions sur mesure",
+                    description: "Développement d'applications et de designs adaptés."
                 },
                 {
-                    icon: "fi-rr-lightbulb-on",
-                    title: "Vision d'Avenir",
-                    description: "Nous exploitons les technologies de pointe pour pérenniser vos investissements numériques."
-                },
-                {
-                    icon: "fi-rr-users",
-                    title: "Véritable Partenariat",
-                    description: "Nous alignons notre succès directement sur le vôtre, en favorisant des relations transparentes à long terme."
+                    number: "03",
+                    title: "Projet terminé",
+                    description: "Déploiement, tests de sécurité et mise en production."
                 }
-            ]
+            ],
+            experienceCard: {
+                number: "4+",
+                text: "ANNÉES D'EXPÉRIENCE"
+            }
         },
         cta: {
             title: "Prêt à accélérer votre croissance ?",
