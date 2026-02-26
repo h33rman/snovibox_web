@@ -58,12 +58,6 @@ function AboutPageContent() {
                                         <i className="fi fi-rr-envelope"></i> {t.aboutPage.advancedSolutions.btnContact}
                                     </Link>
                                 </div>
-
-                                <div className="advanced-banner">
-                                    <i className="fi fi-rr-envelope"></i>
-                                    <span>{t.aboutPage.advancedSolutions.bannerText} </span>
-                                    <Link href="/contact" className="banner-link">{t.aboutPage.advancedSolutions.bannerContact}</Link>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -125,6 +119,37 @@ function AboutPageContent() {
                                     <p>{t.aboutPage.creativeProcess.experienceCard.text}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ── Core Team Section ── */}
+                <section className="about-team">
+                    <div className="container">
+                        <div className="team-header text-center">
+                            <div className="section-pill section-pill-light" style={{ margin: '0 auto 24px', display: 'inline-flex' }}>
+                                <i className="fi fi-rr-users" style={{ marginRight: '8px', color: 'var(--color-primary)' }}></i>
+                                {t.aboutPage.coreTeam.badge}
+                            </div>
+                            <h2>{t.aboutPage.coreTeam.title}</h2>
+                        </div>
+
+                        <div className="team-grid">
+                            {t.aboutPage.coreTeam.members.map((member: any, idx: number) => (
+                                <div key={idx} className="team-card">
+                                    <div className="team-image-wrapper">
+                                        <img src={member.image} alt={member.name} />
+                                        <div className="team-socials">
+                                            <a href="#" className="social-link"><i className="fi fi-brands-linkedin"></i></a>
+                                            <a href="#" className="social-link"><i className="fi fi-brands-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                    <div className="team-info">
+                                        <h4>{member.name}</h4>
+                                        <p>{member.role}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
