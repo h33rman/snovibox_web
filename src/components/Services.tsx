@@ -34,6 +34,34 @@ export function Services() {
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
+
+    // Pagination logic
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const checkScrollProgress = () => {
+        if (!scrollRef.current) return;
+        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        // Calculate which card is currently the most visible
+        const maxScroll = scrollWidth - clientWidth;
+        const scrollPercentage = scrollLeft / maxScroll;
+        const totalItems = t.services.items.length;
+
+        let newIndex = Math.round(scrollPercentage * (totalItems - 1));
+        if (newIndex < 0) newIndex = 0;
+        if (newIndex >= totalItems) newIndex = totalItems - 1;
+        setActiveIndex(newIndex);
+    };
+
+    const scrollToSlide = (index: number) => {
+        if (!scrollRef.current) return;
+        const cardWidth = 380 + 24; // Card width + gap (approximate, fine for modern smooth behavior)
+        scrollRef.current.scrollTo({
+            left: index * cardWidth,
+            behavior: "smooth"
+        });
+        setActiveIndex(index);
+    };
+
     const onMouseDown = (e: MouseEvent) => {
         if (!scrollRef.current) return;
         setIsDragging(true);
@@ -78,15 +106,14 @@ export function Services() {
             </div>
 
             {/* ── Horizontal Scrolling Track ── */}
-            <div className="svc-track-container">
+            <div className="svc-track-container" onMouseLeave={onMouseLeave}>
                 <AnimatedSection delay={0.2}>
                     <div
                         className={`svc-track-wrapper ${isDragging ? "is-dragging" : ""}`}
                         ref={scrollRef}
                         onMouseDown={onMouseDown}
-                        onMouseLeave={onMouseLeave}
                         onMouseUp={onMouseUp}
-                        onMouseMove={onMouseMove}
+                        onScroll={checkScrollProgress}
                     >
                         <div className="svc-track">
                             {t.services.items.map(
@@ -116,6 +143,39 @@ export function Services() {
                             <div className="svc-spacer"></div>
                         </div>
                     </div>
+
+                    {/* ── Navigation (Arrows + Dots) ── */}
+                    <div className="svc-navigation">
+                        <button
+                            className="svc-nav-btn"
+                            aria-label="Previous"
+                            onClick={() => scrollToSlide(activeIndex - 1)}
+                            disabled={activeIndex === 0}
+                        >
+                            <i className="fi fi-rr-arrow-small-left"></i>
+                        </button>
+
+                        <div className="svc-pagination">
+                            {t.services.items.map((_: any, i: number) => (
+                                <button
+                                    key={`dot-${i}`}
+                                    className={`svc-dot ${activeIndex === i ? "active" : ""}`}
+                                    onClick={() => scrollToSlide(i)}
+                                    aria-label={`Go to slide ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            className="svc-nav-btn"
+                            aria-label="Next"
+                            onClick={() => scrollToSlide(activeIndex + 1)}
+                            disabled={activeIndex === t.services.items.length - 1}
+                        >
+                            <i className="fi fi-rr-arrow-small-right"></i>
+                        </button>
+                    </div>
+
                 </AnimatedSection>
             </div>
         </section>

@@ -17,9 +17,9 @@ const laBelleAurore = La_Belle_Aurore({
 });
 
 export const metadata: Metadata = {
-  title: "Snovibox — Solutions Digitales Durables",
+  title: "SNOVIBOX - Votre Partenaire Digital",
   description:
-    "Snovibox SARL conçoit et développe des solutions digitales durables : applications web et mobile, UX/UI design, ERP Odoo, déploiement hardware. Basé à Antananarivo, Madagascar.",
+    "Votre Partenaire Digital. Snovibox SARL conçoit et développe des solutions digitales durables : applications web et mobile, UX/UI design, ERP Odoo, déploiement hardware. Basé à Antananarivo, Madagascar.",
   keywords: [
     "Snovibox",
     "solutions digitales",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     "ERP Odoo",
   ],
   openGraph: {
-    title: "Snovibox — Solutions Digitales Durables",
+    title: "SNOVIBOX - Votre Partenaire Digital",
     description:
-      "Applications web et mobile sur mesure, UX/UI design, ERP Odoo. Vos données hébergées en Suisse.",
+      "Votre Partenaire Digital. Applications web et mobile sur mesure, UX/UI design, ERP Odoo. Vos données hébergées en Suisse.",
     type: "website",
     locale: "fr_FR",
     url: "https://www.snovibox.com",
-    siteName: "Snovibox",
+    siteName: "SNOVIBOX",
   },
 };
 

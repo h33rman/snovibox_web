@@ -94,9 +94,9 @@ export const HERO_SERVICES = [
 ];
 
 export const COMPANY = {
-    name: "Snovibox",
+    name: "SNOVIBOX",
     fullName: "Snovibox SARL",
-    tagline: "Solutions Digitales Durables",
+    tagline: "Votre Partenaire Digital",
     email: "info@snovibox.com",
     emailAlt: "snovibox@gmail.com",
     phone: "+261 34 22 469 51",
