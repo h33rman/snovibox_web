@@ -26,14 +26,22 @@ function AboutPageContent() {
                     <div className="advanced-bg-accent"></div>
                     <div className="container">
                         <div className="advanced-grid">
-                            <div className="advanced-logo-container">
-                                <img src="/assets/logos/website/logo-icon.svg" alt="Snovibox Icon" className="advanced-logo-accent" />
+                            <div className="advanced-boxes-wrapper">
+                                <div className="advanced-boxes-grid">
+                                    {t.aboutPage.advancedSolutions.boxes.map((box: any, idx: number) => (
+                                        <div key={idx} className="advanced-box-card">
+                                            <div className="box-icon">
+                                                <i className={`fi ${box.icon}`}></i>
+                                            </div>
+                                            <h3 dangerouslySetInnerHTML={{ __html: box.title.replace('\n', '<br/>') }}></h3>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                             <div className="advanced-content">
-                                <div className="section-pill section-pill-light">
-                                    <i className="fi fi-rr-bulb" style={{ marginRight: '8px', color: 'var(--color-primary)' }}></i>
+                                <span className="subtitle-handwriting" style={{ display: 'block', marginBottom: '16px' }}>
                                     {t.aboutPage.advancedSolutions.badge}
-                                </div>
+                                </span>
                                 <h2>{t.aboutPage.advancedSolutions.title}</h2>
 
                                 <ul className="advanced-features-list">
@@ -63,13 +71,27 @@ function AboutPageContent() {
                     </div>
                 </section>
 
-                {/* ── Photo Gallery (Crafto Style Image 2) ── */}
+                {/* ── Photo Gallery Slider ── */}
                 <section className="about-gallery">
-                    <div className="gallery-row">
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=400" alt="Gallery 1" className="gal-img img-down" />
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400" alt="Gallery 2" className="gal-img img-up" />
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400" alt="Gallery 3" className="gal-img img-down" />
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Gallery 4" className="gal-img img-up" />
+                    <div className="gallery-marquee">
+                        <div className="gallery-track">
+                            {[
+                                "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
+                                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600"
+                            ].map((src, idx) => (
+                                <img key={idx} src={src} alt={`Snovibox Gallery ${idx + 1}`} className={`gal-img ${idx % 2 === 0 ? 'img-down' : 'img-up'}`} />
+                            ))}
+                        </div>
                     </div>
                 </section>
 
@@ -93,10 +115,9 @@ function AboutPageContent() {
                     <div className="container">
                         <div className="process-grid">
                             <div className="process-content">
-                                <div className="section-pill section-pill-light">
-                                    <i className="fi fi-rr-box-open" style={{ marginRight: '8px', color: 'var(--color-primary)' }}></i>
+                                <span className="subtitle-handwriting" style={{ display: 'block', marginBottom: '16px' }}>
                                     {t.aboutPage.creativeProcess.badge}
-                                </div>
+                                </span>
                                 <h2>{t.aboutPage.creativeProcess.title}</h2>
 
                                 <div className="process-timeline">
@@ -127,24 +148,23 @@ function AboutPageContent() {
                 <section className="about-team">
                     <div className="container">
                         <div className="team-header text-center">
-                            <div className="section-pill section-pill-light" style={{ margin: '0 auto 24px', display: 'inline-flex' }}>
-                                <i className="fi fi-rr-users" style={{ marginRight: '8px', color: 'var(--color-primary)' }}></i>
+                            <span className="subtitle-handwriting" style={{ display: 'inline-block', marginBottom: '16px' }}>
                                 {t.aboutPage.coreTeam.badge}
-                            </div>
+                            </span>
                             <h2>{t.aboutPage.coreTeam.title}</h2>
                         </div>
 
                         <div className="team-grid">
                             {t.aboutPage.coreTeam.members.map((member: any, idx: number) => (
-                                <div key={idx} className="team-card">
-                                    <div className="team-image-wrapper">
+                                <div key={idx} className="team-card-minimal">
+                                    <div className="team-image-wrapper-minimal">
                                         <img src={member.image} alt={member.name} />
-                                        <div className="team-socials">
+                                        <div className="team-socials-minimal">
                                             <a href="#" className="social-link"><i className="fi fi-brands-linkedin"></i></a>
                                             <a href="#" className="social-link"><i className="fi fi-brands-twitter"></i></a>
                                         </div>
                                     </div>
-                                    <div className="team-info">
+                                    <div className="team-info-minimal">
                                         <h4>{member.name}</h4>
                                         <p>{member.role}</p>
                                     </div>
@@ -166,22 +186,6 @@ function AboutPageContent() {
                         </div>
                     </div>
                 </section>
-
-                {/* ── Clean Minimal CTA ── */}
-                <section className="service-detail-cta" style={{ background: 'var(--color-bg)', padding: '120px 0', textAlign: 'center' }}>
-                    <div className="container">
-                        <h2 style={{ fontSize: '3.5rem', fontWeight: 800, color: 'var(--color-secondary)', marginBottom: '24px', letterSpacing: '-1px' }}>
-                            {t.aboutPage.cta.title}
-                        </h2>
-                        <p style={{ fontSize: '1.25rem', color: 'var(--color-gray-500)', marginBottom: '48px', maxWidth: '600px', margin: '0 auto 48px' }}>
-                            {t.aboutPage.cta.description}
-                        </p>
-                        <Link href="/contact" className="btn btn-primary btn-lg" style={{ padding: '16px 40px', fontSize: '1.125rem' }}>
-                            {t.aboutPage.cta.buttonText}
-                        </Link>
-                    </div>
-                </section>
-
             </main>
             <Footer />
         </>

@@ -295,7 +295,7 @@ export const fr = {
             description: ""
         },
         advancedSolutions: {
-            badge: "APPROCHE CRÉATIVE",
+            badge: "Approche créative",
             title: "Fournir des solutions d'entreprise avancées.",
             features: [
                 {
@@ -306,6 +306,12 @@ export const fr = {
                     title: "Augmentez votre taux de conversion.",
                     description: "Optimisation de l'expérience utilisateur et des performances."
                 }
+            ],
+            boxes: [
+                { icon: "fi-rr-award", title: "AGENCE\nPRIMÉE" },
+                { icon: "fi-rr-chess-knight", title: "STRATÉGIE\nD'EXPÉRIENCE" },
+                { icon: "fi-rr-settings", title: "SERVICES DE\nCLASSE MONDIALE" },
+                { icon: "fi-rr-briefcase", title: "DÉVELOPPEZ\nVOTRE ACTIVITÉ" }
             ],
             btnExplore: "Explorer les services",
             btnContact: "Contact rapide",
@@ -319,7 +325,7 @@ export const fr = {
             { number: "100%", title: "Données en Suisse.", description: "Sécurité garantie." }
         ],
         creativeProcess: {
-            badge: "PROCESSUS CRÉATIF",
+            badge: "Processus créatif",
             title: "Le processus créatif derrière nos projets.",
             steps: [
                 {
@@ -344,7 +350,7 @@ export const fr = {
             }
         },
         coreTeam: {
-            badge: "NOTRE ÉQUIPE D'EXPERTS",
+            badge: "Notre équipe d'experts",
             title: "Rencontrez les esprits derrière Snovibox.",
             members: [
                 {
@@ -373,6 +379,33 @@ export const fr = {
             title: "Prêt à accélérer votre croissance ?",
             description: "Contactez-nous pour découvrir comment nos solutions digitales sur mesure peuvent transformer vos processus.",
             buttonText: "Démarrer une conversation"
+        }
+    },
+
+    // ── Contact Page ──
+    contactPage: {
+        hero: {
+            badge: "Prenez contact",
+            title: "Contactez-nous",
+            subtitle: "construisons quelque chose de grand ensemble"
+        },
+        info: {
+            title: "Contact Direct",
+            description: "Vous avez une question spécifique ou préférez nous joindre directement ? Voici comment nous trouver.",
+            addressLabel: "Notre Bureau",
+            addressValue: "Antananarivo, Madagascar\n101, Antananarivo",
+            phoneLabel: "Numéro de Téléphone",
+            emailLabel: "Adresse Email"
+        },
+        form: {
+            title: "Envoyez-nous un Message",
+            description: "Remplissez le formulaire ci-dessous et notre équipe vous répondra sous 24 heures.",
+            namePlaceholder: "Votre Nom Complet",
+            emailPlaceholder: "Votre Adresse Email",
+            subjectPlaceholder: "Sujet",
+            messagePlaceholder: "Parlez-nous de votre projet...",
+            submitBtn: "Envoyer le message",
+            successMessage: "Merci ! Votre message a bien été envoyé."
         }
     }
 };

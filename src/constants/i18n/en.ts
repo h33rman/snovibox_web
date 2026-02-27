@@ -295,7 +295,7 @@ export const en = {
             description: ""
         },
         advancedSolutions: {
-            badge: "CREATIVE APPROACH",
+            badge: "Creative approach",
             title: "Provide advanced business solutions.",
             features: [
                 {
@@ -306,6 +306,12 @@ export const en = {
                     title: "Increase your conversion rate.",
                     description: "User experience and performance optimization."
                 }
+            ],
+            boxes: [
+                { icon: "fi-rr-award", title: "AWARD WINNING\nAGENCY" },
+                { icon: "fi-rr-chess-knight", title: "EXPERIENCE\nSTRATEGY" },
+                { icon: "fi-rr-settings", title: "WORLD-CLASS\nSERVICES" },
+                { icon: "fi-rr-briefcase", title: "GROW YOUR\nBUSINESS" }
             ],
             btnExplore: "Explore services",
             btnContact: "Quick contact",
@@ -319,7 +325,7 @@ export const en = {
             { number: "100%", title: "Swiss Hosted.", description: "Absolute data security." }
         ],
         creativeProcess: {
-            badge: "CREATIVE PROCESS",
+            badge: "Creative process",
             title: "The creative process behind our projects.",
             steps: [
                 {
@@ -344,7 +350,7 @@ export const en = {
             }
         },
         coreTeam: {
-            badge: "OUR EXPERT TEAM",
+            badge: "Our expert team",
             title: "Meet the minds behind Snovibox.",
             members: [
                 {
@@ -373,6 +379,33 @@ export const en = {
             title: "Ready to accelerate your growth?",
             description: "Let's connect and explore how our bespoke digital solutions can transform your operations.",
             buttonText: "Start a Conversation"
+        }
+    },
+
+    // ── Contact Page ──
+    contactPage: {
+        hero: {
+            badge: "Get in touch",
+            title: "Contact Us",
+            subtitle: "let's build something great together"
+        },
+        info: {
+            title: "Direct Contact",
+            description: "Have a specific question or prefer reaching out directly? Here's how you can find us.",
+            addressLabel: "Our Office",
+            addressValue: "Antananarivo, Madagascar\n101, Antananarivo",
+            phoneLabel: "Phone Number",
+            emailLabel: "Email Address"
+        },
+        form: {
+            title: "Send Us a Message",
+            description: "Fill out the form below and our team will get back to you within 24 hours.",
+            namePlaceholder: "Your Full Name",
+            emailPlaceholder: "Your Email Address",
+            subjectPlaceholder: "Subject",
+            messagePlaceholder: "Tell us about your project...",
+            submitBtn: "Send Message",
+            successMessage: "Thank you! Your message has been sent successfully."
         }
     }
 };

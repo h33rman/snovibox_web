@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/hooks";
 import { COMPANY } from "@/constants";
 
@@ -24,9 +25,9 @@ export function Footer() {
                         <p>{t.footer.cta.description}</p>
                     </div>
                     <div className="footer-cta-action">
-                        <a href={`mailto:${COMPANY.email}`} className="btn btn-primary btn--glow">
+                        <Link href="/contact" className="btn btn-primary btn--glow">
                             {t.footer.cta.buttonText}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
